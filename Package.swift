@@ -20,7 +20,7 @@ let package = Package(
                 "AppoxeeInappWrapper"
             ],
             resources: [
-                .copy("AppoxeeInappResources.bundle")
+                .process("AppoxeeInappResources.bundle/apx_close.png"), .process("AppoxeeInappResources.bundle/apx_close@2x.png"), .process("AppoxeeInappResources.bundle/apx_close@3x.png")
             ]
         ),
         .target(
