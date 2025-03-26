@@ -4,14 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Mapp-Engage-iOS-SDK-Inapp-AddOn.xcscheme_^#shared#^_</key>
+		<key>AppoxeeInappResources.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Mapp-Engage-iOS-SDK-Inapp-AddOn-Package.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Mapp-Engage-iOS-SDK-Inapp-AddOn.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>AppoxeeInappResources</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>Mapp-Engage-iOS-SDK-Inapp-AddOn</key>
 		<dict>
 			<key>primary</key>

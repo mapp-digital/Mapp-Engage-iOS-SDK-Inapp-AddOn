@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
             targets: ["Mapp-Engage-iOS-SDK-Inapp-AddOn"]),
+        .library(
+            name: "AppoxeeInappResources",
+            targets: ["AppoxeeInappResources"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -18,9 +21,12 @@ let package = Package(
             name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
             dependencies: [
                 "AppoxeeInappWrapper"
-            ],
+            ]
+        ),
+        .target(
+            name: "AppoxeeInappResources",
             resources: [
-                .process("AppoxeeInappResources.bundle/apx_close.png"), .process("AppoxeeInappResources.bundle/apx_close@2x.png"), .process("AppoxeeInappResources.bundle/apx_close@3x.png")
+                .process("../../SDK/AppoxeeInappResources.bundle")
             ]
         ),
         .target(
