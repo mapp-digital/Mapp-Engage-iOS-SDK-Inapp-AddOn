@@ -9,10 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
-            targets: ["Mapp-Engage-iOS-SDK-Inapp-AddOn"]),
-        .library(
-            name: "AppoxeeInappResources",
-            targets: ["AppoxeeInappResources"])
+            targets: ["Mapp-Engage-iOS-SDK-Inapp-AddOn"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,12 +18,6 @@ let package = Package(
             name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
             dependencies: [
                 "AppoxeeInappWrapper"
-            ]
-        ),
-        .target(
-            name: "AppoxeeInappResources",
-            resources: [
-                .process("../../SDK/AppoxeeInappResources.bundle")
             ]
         ),
         .target(
