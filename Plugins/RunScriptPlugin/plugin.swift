@@ -11,11 +11,12 @@ import PackagePlugin
 struct RunScriptPlugin: BuildToolPlugin {
     func createBuildCommands(context: PluginContext, target: Target) throws -> [Command] {
         let scriptPath = context.package.directory.appending("Scripts/post_install.sh")
+        let bashPath = Path("/bin/bash")
         
         return [
             .prebuildCommand(
                 displayName: "Running post-install script",
-                executable: "/bin/bash",
+                executable: bashPath,
                 arguments: [scriptPath.string],
                 outputFilesDirectory: context.pluginWorkDirectory
             )
