@@ -18,12 +18,7 @@ let package = Package(
             name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
             dependencies: [
                 "AppoxeeInappWrapper"
-            ], plugins: ["RunScriptPlugin"]
-        ),
-        .plugin(
-            name: "RunScriptPlugin",
-            capability: .buildTool(),
-            path: "Plugins/RunScriptPlugin"
+            ]
         ),
         .target(
             name: "AppoxeeInappWrapper",
