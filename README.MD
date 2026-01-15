@@ -19,8 +19,8 @@ end
 
 ```ruby
 target 'project_name' do
-    pod 'MappSDK', :git => 'https://github.com/MappCloud/MappSDK.git', :tag => '6.1.0'
-    pod 'MappSDKInapp', :git => 'https://github.com/MappCloud/MappSDKInapp.git', :tag => '6.0.8'
+    pod 'MappSDK', :git => 'https://github.com/MappCloud/MappSDK.git', :tag => '6.1.2'
+    pod 'MappSDKInapp', :git => 'https://github.com/MappCloud/MappSDKInapp.git', :tag => '6.0.9'
 end
 ```
 
