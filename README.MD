@@ -1,42 +1,39 @@
-Mapp SDK
-===========
-This repository contains the Mapp iOS SDK for in app messages. It is agreggation for Mapp SDK for push notifications.
+Mapp SDK In-App Add-On
+=======================
+
+This repository contains the Mapp Engage iOS SDK in-app messaging add-on.
 
 Integration
 -----------
 
-**Cocoa pods**
+### Swift Package Manager
 
-```ruby
-target 'project_name' do
-    pod 'MappSDK'
-    pod 'MappSDKInapp'
-end
+Add this repository as a package dependency in Xcode or in `Package.swift`:
+
+```swift
+.package(url: "https://github.com/MappCloud/MappSDKInapp.git", from: "6.0.12")
 ```
 
-**OR**
+Then add the library product to your app target:
 
-
-```ruby
-target 'project_name' do
-    pod 'MappSDK', :git => 'https://github.com/MappCloud/MappSDK.git', :tag => '6.1.2'
-    pod 'MappSDKInapp', :git => 'https://github.com/MappCloud/MappSDKInapp.git', :tag => '6.0.11'
-end
+```swift
+.product(
+    name: "Mapp-Engage-iOS-SDK-Inapp-AddOn",
+    package: "MappSDKInapp"
+)
 ```
 
-**Manual**
+Import the package module where you use the SDK:
 
-* Drag and drop the ```AppoxeeSDK.xcframework``` to your project.
-* Drag and drop the ```AppoxeeSDKResources.bundle``` to your project.
-* Drag and drop the ```AppoxeeInapp.xcframework``` to your project.
-* Drag and drop the ```AppoxeeInappResources.bundle``` to your project.
-* Link ```UserNotifications.framework``` to your project.
-* Link ```WebKit.framework``` to your project.
+```swift
+import Mapp_Engage_iOS_SDK_Inapp_AddOn
+```
 
 Implementation
 --------------
 
-**Objective-C**
+### Objective-C
+
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -46,12 +43,15 @@ Implementation
 }
 ```
 
-**Swift**
-```swift
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+### Swift
 
-            Appoxee.shared()?.engageAndAutoIntegrate(launchOptions: launchOptions, andDelegate: nil, with: .EMC_US)
-            AppoxeeInapp.shared()?.engage(with: self, with: .eMC_US)
+```swift
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -> Bool {
+    Appoxee.shared()?.engageAndAutoIntegrate(launchOptions: launchOptions, andDelegate: nil, with: .EMC_US)
+    AppoxeeInapp.shared()?.engage(with: self, with: .eMC_US)
 
     return true
 }
@@ -59,4 +59,5 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 License
 -------
+
 https://mapp.com/contracts/
