@@ -51,6 +51,7 @@ func application(
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
 ) -> Bool {
     Appoxee.shared()?.engageAndAutoIntegrate(launchOptions: launchOptions, andDelegate: nil, with: .EMC_US)
+    MappInappResources.configure()
     AppoxeeInapp.shared()?.engage(with: self, with: .eMC_US)
 
     return true
