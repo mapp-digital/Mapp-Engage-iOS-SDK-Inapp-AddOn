@@ -11,7 +11,7 @@ Integration
 Add this repository as a package dependency in Xcode or in `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/MappCloud/MappSDKInapp.git", from: "6.0.12")
+.package(url: "https://github.com/MappCloud/MappSDKInapp.git", from: "6.0.13")
 ```
 
 Then add the library product to your app target:
